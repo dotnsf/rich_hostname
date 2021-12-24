@@ -31,6 +31,8 @@ spec:
           - name: PROTOCOLS
           - name: LOG_LEVEL
             value: debug
+          - name: COLOR
+            value: "#000"
           - name: BGCOLOR
             value: "#ccf"
           image: quay.io/dotnsf/rich_hostname
