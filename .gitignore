@@ -1,0 +1,5 @@
+node_modules/
+settings.js.*
+k8s/manifest.yaml
+k8s/kustomize
+npm-debug.log

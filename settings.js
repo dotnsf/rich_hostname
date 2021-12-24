@@ -1,0 +1,2 @@
+//. BGCOLOR
+exports.bgcolor = 'white';
