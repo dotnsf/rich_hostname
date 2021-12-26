@@ -1,6 +1,5 @@
 //.  app.js
 var express = require( 'express' ),
-    cors = require( 'cors' ),
     ejs = require( 'ejs' ),
     fs = require( 'fs' ),
     app = express();
@@ -20,11 +19,7 @@ app.get( '/', function( req, res ){
       if( !settings_color && !settings_bgcolor ){
         res.contentType( 'text/plain; charset=utf-8' );
         if( settings_cors ){
-          var option = {
-            origin: [ settings_cors ],
-            optionSuccessStatus: 200
-          };
-          app.use( cors( option ) );
+          res.setHeader( 'Access-Control-Allow-Origin', settings_cors );
         }
         res.write( JSON.stringify( err, null, 2 ) );
         res.end();
@@ -35,11 +30,7 @@ app.get( '/', function( req, res ){
       if( !settings_color && !settings_bgcolor ){
         res.contentType( 'text/plain; charset=utf-8' );
         if( settings_cors ){
-          var option = {
-            origin: [ settings_cors ],
-            optionSuccessStatus: 200
-          };
-          app.use( cors( option ) );
+          res.setHeader( 'Access-Control-Allow-Origin', settings_cors );
         }
         res.write( text );
         res.end();
