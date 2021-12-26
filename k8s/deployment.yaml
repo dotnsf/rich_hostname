@@ -35,6 +35,8 @@ spec:
             value: "#000"
           - name: BGCOLOR
             value: "#ccf"
+          - name: CORS
+            value: ""
           image: quay.io/dotnsf/rich_hostname
           imagePullPolicy: IfNotPresent
           livenessProbe:
